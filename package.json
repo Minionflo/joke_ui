@@ -1,0 +1,17 @@
+{
+  "name": "joke_ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js test",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "Minionflo",
+  "license": "ISC",
+  "dependencies": {
+    "got": "9.6.0",
+    "node-gtk": "^0.10.0"
+  }
+}
