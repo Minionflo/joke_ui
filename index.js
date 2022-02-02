@@ -3,6 +3,7 @@ const gi = require('node-gtk')
 const Gdk = gi.require('Gdk', '3.0')
 const Gtk = gi.require('Gtk', '3.0')
 const got = require('got');
+var config = require('./config.json');
 
 gi.startLoop()
 Gtk.init()
@@ -25,7 +26,7 @@ win.on('key-press-event', (event) => {
 const text = builder.getObject('text')
 text.on('key-press-event', (event) => {
     if (event.keyval == Gdk.KEY_Return) {
-        got('http://192.168.255.10:5117/speak/' + text.text)
+        got(config.joke_server + text.text)
         win.close()
         return true
     }
